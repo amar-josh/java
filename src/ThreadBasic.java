@@ -15,26 +15,26 @@ class SequencePrint{
 }
 
  class Thread1 extends Thread {
-    SequencePrint s;
-     Thread1(SequencePrint s){
-        this.s = s;
+    SequencePrint sequence;
+     Thread1(SequencePrint sequence){
+        this.sequence = sequence;
     }
     @Override
     public void run(){
-         s.print(1);
+        sequence.print(1);
     }
 }
 
 
 class Thread2 extends Thread {
-    SequencePrint s;
-    public Thread2(SequencePrint s){
-        this.s = s;
+    SequencePrint sequence;
+    public Thread2(SequencePrint sequence){
+        this.sequence = sequence;
     }
 
     @Override
     public void run() {
-        s.print(6);
+        sequence.print(6);
     }
 }
 
@@ -44,12 +44,12 @@ public class ThreadBasic {
 
  public static  void main(String[] args){
      SequencePrint s1 = new SequencePrint();
-     Thread1 t1 = new Thread1(s1);
-     Thread2 t2 = new Thread2(s1);
-     t1.setName("Thread1:");
-     t2.setName("Thread2:");
-     t1.start();
-     t2.start();
+     Thread1 sequence1 = new Thread1(s1);
+     Thread2 sequence2 = new Thread2(s1);
+     sequence1.setName("Thread1:");
+     sequence2.setName("Thread2:");
+     sequence1.start();
+     sequence2.start();
  }
 
 }
