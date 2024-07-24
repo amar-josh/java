@@ -1,9 +1,7 @@
 
-    import java.util.ArrayList;
-    import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
     @FunctionalInterface
@@ -52,8 +50,10 @@ import java.util.stream.Collectors;
                     () -> System.out.println("No even number greater than 5 found")
             );
 
-            //static and default methods with optional class
+            //static and default methods and optional class
             EvenNumberChecker checker = n -> n % 2 == 0;
+            System.out.println("4 Even " + checker.isEven(4));
+            System.out.println("3 Even " + checker.isEven(3));
             System.out.println("Default : " + checker.defaultCheck(4));
             System.out.println("Static: " + EvenNumberChecker.staticCheck(3));
         }
