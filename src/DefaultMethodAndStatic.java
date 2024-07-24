@@ -54,8 +54,8 @@ import java.util.stream.Collectors;
 
             //static and default methods with optional class
             EvenNumberChecker checker = n -> n % 2 == 0;
-            System.out.println("Default check for 4: " + checker.defaultCheck(4));
-            System.out.println("Static check for 7: " + EvenNumberChecker.staticCheck(7));
+            System.out.println("Default : " + checker.defaultCheck(4));
+            System.out.println("Static: " + EvenNumberChecker.staticCheck(3));
         }
     }
 
